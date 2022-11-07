@@ -1,0 +1,56 @@
+<?php $data = $this->getalldata();
+// echo "working";
+
+
+?>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Telephone</th>
+    <th>Delete</th>
+  </tr>
+
+  <?php foreach($data as $datanew) 
+  
+  {
+    
+    ?>
+  <tr>
+    <td><?php echo $datanew['id_column']; ?></td>
+    <td><?php  echo $datanew['Name']; ?></td>
+    <td><?php echo $datanew['Email']; ?></td>
+    <td><?php echo $datanew['Telephone']; ?></td>
+    <td> <a href="<?php echo $block->getDeleteUrl().'?id_column='.$datanew['id_column'];?>">Delete</a></td>
+  </tr>
+<?php 
+}
+ ?>
+</table>
+<?php
+
+$cars = $block->getAllCars();
+?>
+
+          
+
+<form method="post" action="<?= $block->getAddCarPostUrl() ?>">
+   <fieldset>
+       <div>
+            <label for="Name"><?= __("Name") ?>
+           <input type="text" name="Name" id="Name" />
+       </div>
+       <div>
+            <label for="Email"><?= __("Email") ?>
+           <input type="text" name="Email" id="Email" />
+       </div>
+       <div>
+            <label for="Telephone"><?= __("Telephone") ?>
+           <input type="text" name="Telephone" id="Telephone" />
+       </div> <br>
+      <input type="submit" value="<?= __("Submit") ?>" />
+   </fieldset>
+</form>
+
+

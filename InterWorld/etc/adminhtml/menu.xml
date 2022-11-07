@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Hello_InterWorld::helloworld" title="Main Menu" module="Hello_InterWorld" sortOrder="51" resource="Hello_InterWorld::helloworld"/>
+        <add id="Hello_InterWorld::post" title="Manage Posts" module="Hello_InterWorld" sortOrder="10" action="Hello_InterWorld/post" resource="Hello_InterWorld::post" parent="Hello_InterWorld::helloworld"/>
+        <add id="Hello_InterWorld:hello_configuration" title="Configuration" module="Hello_InterWorld" sortOrder="99" parent="Hello_InterWorld::helloworld" action="adminhtml/system_config/edit/section/helloworld" resource="Hello_InterWorld::helloworld_configuration"/>
+    </menu>
+</config>

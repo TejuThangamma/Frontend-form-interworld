@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Hello\InterWorld\Api\EmployeeRepositoryInterface" type="Hello\InterWorld\Model\EmployeeRepository"/>
+    <preference for="Hello\InterWorld\Api\Data\EmployeeInterface" type="Hello\InterWorld\Model\Employee"/>
+    <preference for="Hello\InterWorld\Api\Data\EmployeeSearchResultInterface" type="Hello\InterWorld\Model\EmployeeSearchResult"/>
+</config>
